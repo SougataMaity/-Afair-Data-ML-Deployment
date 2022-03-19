@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'main.css')}}">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <h3>Extra Marital Affair</h3>
+    </nav>
+    <div class="row1">
+        <div class="col1">
+            <h1>Logistric regression !</h1>
+            <h2>Predict Extra Marital Affair</h2>
+        </div>
+        <div class="col2">
+            <form action="{{url_for('predict')}}" method="post">
+                <label for="mr">Marraiage Rate</label>
+                <select name="marrageRate" id="mr">
+                    <option value="1">1: Very dissatisfied</option>
+                    <option value="2">2: Dissatisfied</option>
+                    <option value="3">3: Average</option>
+                    <option value="4">4: Satisfied</option>
+                    <option value="5">5: Very Satisfied</option>
+                </select><br>
+                <label for="age">Woman Age</label>
+                <input type="number" name='age' required='required'><br>
+                <label for="no-year-married">No Marrage years</label>
+                <input type="number" name='no-year-marrage' step=0.1 required='required'><br>
+                <label for="no-of-children">No of Children</label>
+                <input type="number" name='no-of-children' required='required'><br>
+                <label for="mr">Religious</label>
+                <select name="religious" id="reli">
+                    <option value="1">1: Not Religious</option>
+                    <option value="2">2: Average</option>
+                    <option value="3">3: Religious</option>
+                    <option value="4">4: Strongly Religious</option>
+                </select><br>
+                <label for="education">Education</label>
+                <select name="education" id="edu">
+                    <option value="9">1: Grade School</option>
+                    <option value="12">2: High School</option>
+                    <option value="14">3: Enrole College</option>
+                    <option value="16">4: college graduate</option>
+                    <option value="17">5: Enrole Degree</option>
+                    <option value="20">6: Advance Degree</option>
+                </select><br>
+                <label for="occupation">Occupation</label>
+                <select name="occupation" id="occu">
+                    <option value="1">1: Student</option>
+                    <option value="2">2: Semi or Unskill</option>
+                    <option value="3">3: White Collar</option>
+                    <option value="4">4: Teacher/Nurse/Writer/Technician/Skilled</option>
+                    <option value="5">5: managerial or business</option>
+                    <option value="6">6: professional with advanced degree</option>
+                </select><br>
+                <label for="occupation-husb">Husband Occupation </label>
+                <select name="occupation-husb" id="ocu-husb">
+                    <option value="1">1: Student</option>
+                    <option value="2">2: Semi or Unskill</option>
+                    <option value="3">3: White Collar</option>
+                    <option value="4">4: Teacher/Nurse/Writer/Technician/Skilled</option>
+                    <option value="5">5: managerial or business</option>
+                    <option value="6">6: professional with advanced degree</option>
+                </select><br>
+                <button class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
